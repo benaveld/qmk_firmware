@@ -26,6 +26,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MOUSEKEY_MAX_SPEED   7
 #define MOUSEKEY_WHEEL_DELAY 0
 
+/* Set 0 if debouncing isn't needed */
+#define DEBOUNCE 5
+
+/* serial.c configuration for split keyboard */
+#define SOFT_SERIAL_PIN D0
+// #define SPLIT_HAND_MATRIX_GRID F7, B4
+// #define SPLIT_HAND_MATRIX_GRID B4, F7
+#define SPLIT_USB_DETECT
+
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
@@ -33,3 +42,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Enables This makes it easier for fast typists to use dual-function keys */
 #define PERMISSIVE_HOLD
+
+#define USE_I2C
+#ifdef USE_SERIAL
+  #undef USE_SERIAL
+#endif
+// #ifdef SOFT_SERIAL_PIN
+//   #undef SOFT_SERIAL_PIN
+// #endif
