@@ -21,3 +21,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define MASTER_RIGHT
 
 //#define EE_HANDS
+
+//For dvorak U
+// #define UNICODE_KEY_LNX LCTL(LSFT(KC_F))
